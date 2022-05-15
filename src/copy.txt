@@ -1,0 +1,62 @@
+import React from 'react'
+import {Box} from '@mui/system'
+import Typography from '@mui/material/Typography';
+import { makeStyles } from "@material-ui/core/styles";
+import { TextField } from '@material-ui/core';
+
+export default function LoginPage() {
+  
+  const useStyles = makeStyles((theme) => ({
+  Paper: {
+           marginTop: theme.spacing(9),
+           alignItems: "center",
+           display: "flex",
+           width: "70",
+           flexDirection: "column",
+  },
+  form: {
+          marginTop: theme.spacing(2),
+          width: "70",
+  },
+  submit: {
+          margin: theme.spacing(3, 0, 2),
+  },
+
+
+   }));
+   
+  
+   const classes = useStyles();
+   
+  return (
+    <Box Container flex
+        component ="main" 
+        sx={{ py: "4rem", backgroundColor: "#dee2e6", color: "#34b7a7"}}
+        px= {{ xs: 3, sm: 4, md: "6rem"}}>
+      <Typography display="block">
+        <p>Sign in</p>
+      </Typography>
+        <form
+         className = {classes.form}
+         onSubmit = { (e) =>{
+           Event.preventDefault();
+           //handleSubmit();
+         }}
+      
+         >
+         <TextField
+            id = 'Name'
+            variant = 'Outlined'
+            label = 'Name'
+
+            
+            
+          />
+
+        </form>
+    </Box>
+    
+
+
+  );
+}
